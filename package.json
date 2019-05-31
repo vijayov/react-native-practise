@@ -5,9 +5,11 @@
     "ios": "react-native run-ios"
   },
   "dependencies": {
+    "@babel/runtime": "^7.0.0",
     "react": "16.5.0",
     "react-native": "0.57.1",
-    "@babel/runtime": "^7.0.0"
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
