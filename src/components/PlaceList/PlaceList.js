@@ -5,8 +5,7 @@ import ListItem from '../ListItem/ListItem';
 class PlaceList extends React.Component {
 
     onItemsPressed(key){
-        console.log(key)
-        return this.props.onSelectHandler(key)
+        return this.props.onItemSelected(key)
     }
      
     render(){

@@ -2,6 +2,7 @@ import React from 'react';
 import { View, TextInput , StyleSheet , Button} from 'react-native';
 
 
+
 class PlaceInput extends React.Component {
     state = {
         placeName : ''
@@ -9,12 +10,16 @@ class PlaceInput extends React.Component {
 
     todoHandler = (value) => {
         this.setState({placeName : value})
+        console.log(this.state);
     }
 
     placeSubmitHandler = () => {
+        console.log('called')
         if(this.state.placeName.trim() === ''){
+            console.log('called')
             return;
         }
+     
         this.props.onPlaceAdded(this.state.placeName);
     }
 
@@ -22,7 +27,11 @@ class PlaceInput extends React.Component {
         return (
             <View style={styles.inputContainer}>
                 <TextInput placeholder="Add Place" onChangeText={this.todoHandler} style={styles.placeInput} />
-                <Button title="Add" style={styles.placeButton} onPress={this.placeSubmitHandler} />
+                <Button
+                    title="Add"
+                    style={styles.placeButton}
+                    onPress={this.placeSubmitHandler}
+                />
             </View>
         )
         
